@@ -1,0 +1,12 @@
+<div class="face-snap-card " [ngClass]="{snapped: buttonText === 'dislike' }">
+  <p>{{ 4346234.36 | number }}</p>
+  <h2>{{ firstOne.title | titlecase }}</h2>
+  <p>Mis en ligne le {{ firstOne.createdDate }}</p>
+  <img [src]="imageUrl" [alt]="title">
+  <p>{{ firstOne.description }}</p>
+  <p *ngIf="firstOne.location">  à la ville de: {{firstOne.location}}</p>
+  <p>
+    <button (click)="onSnap()">{{buttonText}}</button>
+    <span [ngStyle]="{color: 'rgb(0, ' +firstOne.snaps+ ',0)'}">{{ firstOne.snaps }}</span>
+  </p>
+</div>
